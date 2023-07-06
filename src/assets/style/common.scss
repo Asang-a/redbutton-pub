@@ -1,0 +1,102 @@
+@import './reset.css';
+@import './login.scss';
+:root {
+  background-color: $achromatic10;
+  font-size: $fontSizeDefault;
+}
+
+.align-left {
+  display: flex;
+  justify-content: left;
+}
+.align-rigth {
+  display: flex;
+  justify-content: right;
+}
+.align-center {
+  display: flex;
+  justify-content: center;
+}
+.align-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type='text'],
+input[type='password'] {
+  border: none;
+  background-color: $achromatic10;
+  // padding: 20px 20px 20px 100px;
+  border-radius: 20px;
+  padding: 0 0 0 35px;
+  width: 373px;
+  height: 90px;
+
+  font-size: $fontSizeDefault;
+}
+
+.btn {
+  border: none;
+  width: 524px;
+  height: 100px;
+  border-radius: 20px;
+  font-size: $fontSizeDefault;
+  margin: 5px;
+  color: $achromatic0;
+
+  background-color: $primary;
+
+  &.disabled {
+    background-color: $disabled;
+  }
+}
+
+.icon-right-arrow {
+  display: inline-block;
+  background-image: url('/src/assets/image/icon-right-arrow.svg');
+  width: 50px;
+  height: 50px;
+}
+
+ul.tab {
+  font-size: 38px;
+  font-weight: 520;
+
+  li {
+    color: $achromatic40;
+    display: inline-block;
+    padding: 0 30px;
+    border-left: 1px solid $achromatic40;
+    &.on {
+      color: $achromatic100;
+    }
+  }
+  li:first-child {
+    border: none;
+  }
+}
+
+table {
+  width: 100%;
+
+  tr:nth-of-type(odd) {
+    background-color: $achromatic10;
+  }
+  tr:nth-of-type(odd)td:first-child {
+    border-radius: 20px 0 0 20px;
+  }
+  tr:nth-of-type(odd)td:last-child {
+    border-radius: 0 20px 20px 0;
+  }
+  tr:first-child {
+    text-align: left;
+    background-color: transparent;
+    border-bottom: 1px solid $achromatic40;
+  }
+  th {
+    padding: 36px 40px 18px;
+  }
+  td {
+    padding: 40px;
+  }
+}
